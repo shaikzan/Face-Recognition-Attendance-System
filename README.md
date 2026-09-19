@@ -1,37 +1,77 @@
+# Face Recognition Attendance System
 
-# Face based attendance system using python and openCV
+A face-recognition-based attendance management system that automates student identification and attendance recording using computer vision and machine learning.
 
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)                 
-[![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/) 
+The project contains **two implementations**:
 
-### What steps you have to follow??
-- Download or clone my Repository to your device
-- type `pip install -r requirements.txt` in command prompt(this will install required package for project)
-- Create a `TrainingImage` folder in a project folder.
-- Run `attendance.py` from the project root. Paths are resolved relative to the project automatically.
+* **Desktop Application** — Python, OpenCV, Tkinter, Haar Cascade, LBPH, Pandas, and CSV storage.
+* **Web Application** — Next.js, React, TypeScript, Flask, MongoDB, MTCNN, DeepFace, and FaceNet512.
 
-### Project flow & explaination
-- After you run the project you have to register your face so that system can identify you, so click on register new student
-- After you click a small window will pop up in that you have to enter you ID and name and then click on `Take Image` button
-- After clicking `Take Image` button A camera window will pop up and it will detect your Face and take upto 50 Images(you can change the number of Image it can take) and stored in the folder named `TrainingImage`. more you give the image to system, the better it will perform while recognising the face.
-- Then you have to click on `Train Image` button, It will train the model and convert all the Image into numeric format so that computer can understand. we are training the image so that next time when we will show the same face to the computer it will easily identify the face.
-- It will take some time(depends on you system).
-- After training the model, click `Take Attendance`, enter the subject name, and the system will fill attendance using the trained model.
-- it will create `.csv` file for every subject you enter and seperate every `.csv` file according the subject
-- You can view the attendance after clicking `View Attendance` button. It will show record in tabular format.
+The system allows students to register their details and face images, trains or generates facial representations, recognizes students through a webcam, and records their attendance automatically.
 
-### Screenshots
+## Key Features
 
-### Simple UI
-<img src='https://github.com/Patelrahul4884/Attendance-Management-system-using-face-recognition/blob/master/Project%20Snap/1.PNG'>
+* Student registration
+* Webcam-based face capture
+* Real-time face detection and recognition
+* Automated attendance marking
+* Duplicate attendance prevention
+* Subject-wise attendance records
+* Attendance percentage calculation
+* Desktop GUI
+* Web-based dashboard
+* MongoDB-based student and face-embedding storage
+* CSV-based attendance storage for the desktop version
+* Browser camera integration
+* Voice feedback in the desktop application
 
-### While taking Image
-![Screenshot (103)](https://user-images.githubusercontent.com/26384517/86820502-c7f44500-c0a6-11ea-9530-6317ec2059d9.png)
+## Technology Stack
 
-## While taking Attendance
-![Screenshot (91)](https://user-images.githubusercontent.com/26384517/86821090-9465ea80-c0a7-11ea-9680-777923663d0c.png)
+**Desktop**
 
-## Attendance in tabular format 
-<img src='https://github.com/Patelrahul4884/Attendance-Management-system-using-face-recognition/blob/master/Project%20Snap/7.PNG'>
+* Python
+* OpenCV
+* Haar Cascade
+* LBPH Face Recognizer
+* Tkinter
+* Pandas
+* Pillow
+* CSV
+* pyttsx3
 
-## Just follow me and Star⭐ my repository
+**Web**
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* Flask
+* MongoDB
+* DeepFace
+* FaceNet512
+* MTCNN
+* Bcrypt
+
+## System Workflow
+
+```text
+Student Registration
+        ↓
+Capture Face Images
+        ↓
+Face Detection
+        ↓
+Training / Face Embedding Generation
+        ↓
+Webcam Recognition
+        ↓
+Student Identification
+        ↓
+Attendance Recording
+        ↓
+Attendance Reports
+```
+
+The desktop implementation uses **Haar Cascade + LBPH**, while the web implementation uses **MTCNN + FaceNet512 through DeepFace**.
+
+This project demonstrates the integration of computer vision, machine learning, web development, databases, and automated attendance management in a single system.
